@@ -1,0 +1,17 @@
+// Variables + Mixins + Functions
+@import 'helpers/variables.scss';
+
+// Always include variable 1st !
+@import 'helpers/mixins.scss';
+
+// Base
+@import 'base/typography.scss';
+
+// Vendors
+// Import jQuery lib, Bootstrap ... etc
+
+// Themes
+// If we have themes, import specific styles here
+
+// Layout
+@import 'layout/common.scss';
