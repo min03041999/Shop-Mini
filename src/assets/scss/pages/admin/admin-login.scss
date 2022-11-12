@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;500;700&display=swap');
+
+
+.admin-login {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #FEE4D4;
+
+    &_container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1000px;
+        height: 600px;
+        @media #{$info-tablet-vertical} {
+            width: 400px;
+        }
+        background: #fff;
+        box-shadow: #f45f34 17px 17px 40px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
+        @media #{$info-tablet-vertical} {
+            box-shadow: #f45f34 17px 17px 40px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
+        }
+
+        &_right {
+            @media #{$info-tablet-vertical} {
+                order: 1 !important;
+            }
+            position: relative;
+            font-family: 'Sono', sans-serif;
+            background: #FEE4D4;
+            border-right: 2px solid #FFD1B7;
+
+            box-sizing: border-box;
+            padding: 8rem 4rem;
+
+            @media #{$info-tablet-vertical} {
+                padding: 4rem 6rem;
+            }
+
+            .login-logo {
+                width: 30%;
+                height: 30%;
+                
+            }
+
+            .login-title {
+                font-weight: 700;;
+                @include font-size(28px);
+                margin-bottom: 1rem;
+            }
+
+            .login-content-1 {
+                font-weight: 500;
+                @include font-size(18px);
+                margin-bottom: 1rem;
+            }
+
+            .login-content-2 {
+                font-weight: 600;
+                @include font-size(22px);
+                margin-bottom: 1rem;
+            }
+        }
+
+        &_left {
+            @media #{$info-tablet-vertical} {
+                order: 2 !important;
+            }
+            position: relative;
+            background: #fff;
+            border-left: 2px solid #FFD1B7;
+            border-top: 1px solid #FDB493;
+            border-right: 1px solid #FDB493;
+
+            box-sizing: border-box;
+            padding: 10rem 6rem;
+            @media #{$info-tablet-vertical} {
+                padding: 5rem 6rem;
+            }
+
+            .login-title {
+                font-family: 'Sono', sans-serif;
+                font-weight: 700;
+                @include font-size(28px);
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .login-form {
+                font-family: 'Sono', sans-serif;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 15px;
+
+                &-group {
+                    display: inline-grid;
+                    
+                    .label {
+                        font-weight: 500;
+                        @include font-size(18px);
+                        margin-bottom: 5px;
+                    }
+
+                    .input {
+                        font-family: 'Sono', sans-serif;
+                        border: 1px solid #A69F9C;
+                        border-radius: 5px;
+                        width: 100%;
+                        height: 30px;
+                        background-color: #82a4c840 ;
+                        box-sizing: border-box;
+                        padding: 5px 10px;
+                        @include font-size(18px);
+                    }
+                }
+
+                &-button {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .button-submit {
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        padding: 0.8rem 1rem;
+                        background-color: #000;
+                        color: #fff;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_container.grid-column {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$info-tablet-vertical} {
+        &_container.grid-column {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+
+}
