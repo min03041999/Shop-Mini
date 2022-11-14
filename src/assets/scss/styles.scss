@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,700;1,400;1,700&display=swap');
 // Variables + Mixins + Functions
 @import 'helpers/variables.scss';
 
@@ -20,3 +23,5 @@
 //Pages
 //Admin Login
 @import 'pages/admin/admin-login.scss';
+@import 'pages/admin/admin-sidebar.scss';
+@import 'pages/admin/admin-navbar.scss';
