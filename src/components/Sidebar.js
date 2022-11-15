@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link, useLocation } from "react-router-dom";
 import {
   MdKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
@@ -13,6 +13,10 @@ const Sidebar = (props) => {
   const toggleOpen = () => {
     setOpen(!open);
   };
+
+  const { pathname } = useLocation();
+  const active = navData.findIndex((e) => e.link === pathname);
+
   return (
     <div className={open ? "sidebar_open" : "sidebar_closed"}>
       <div className="admin-sidebar">
@@ -29,14 +33,18 @@ const Sidebar = (props) => {
             <MdOutlineKeyboardArrowRight size={30} />
           )}
         </button>
-        {navData.map((item) => {
+        {navData.map((item, i) => {
           return (
-            <div key={item.id} className="admin-sidebar_item">
+            <Link
+              key={item.id}
+              className={`admin-sidebar_item ${i === active ? "active" : ""}`}
+              to={item.link}
+            >
               {item.icon}
               <span className={open ? "link_open" : "link_closed"}>
                 {item.text}
               </span>
-            </div>
+            </Link>
           );
         })}
       </div>

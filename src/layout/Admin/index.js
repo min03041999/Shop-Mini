@@ -14,9 +14,9 @@ const Admin = () => {
       {auth === null ? (
         <AdminLogin />
       ) : (
-        <section className="admin">
+        <section>
           <Sidebar open={open} setOpen={setOpen} />
-          <Navbar />
+          <Navbar open={open} />
         </section>
       )}
     </>
