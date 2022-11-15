@@ -1,18 +1,52 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import {
+  MdKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { navData } from "../menudata/SidebarData";
 
-const Sidebar = () => {
+import LogoFox from "../assets/images/logo-fox.png";
+
+const Sidebar = (props) => {
+  const { open, setOpen } = props;
+  const toggleOpen = () => {
+    setOpen(!open);
+  };
+
+  const { pathname } = useLocation();
+  const active = navData.findIndex((e) => e.link === pathname);
+
   return (
-    <div className="admin-sidebar">
-      <div className="admin-sidebar_header">Mini Shop</div>
-      <div className="admin-sidebar_item">
-        <div className="label">system management</div>
-        <ul className="menu">
-          <li className="item">Categories</li>
-          <li className="item">Products</li>
-          <li className="item">Order</li>
-          <li className="item">Users</li>
-          <li className="item">Setting</li>
-        </ul>
+    <div className={open ? "sidebar_open" : "sidebar_closed"}>
+      <div className="admin-sidebar">
+        <div>
+          <div className="admin-sidebar_header">
+            <img src={LogoFox} alt="LogoFox" />
+            {open ? "MiniShop" : ""}
+          </div>
+        </div>
+        <button className="admin-sidebar_button" onClick={toggleOpen}>
+          {open ? (
+            <MdKeyboardArrowLeft size={30} />
+          ) : (
+            <MdOutlineKeyboardArrowRight size={30} />
+          )}
+        </button>
+        {navData.map((item, i) => {
+          return (
+            <Link
+              key={item.id}
+              className={`admin-sidebar_item ${i === active ? "active" : ""}`}
+              to={item.link}
+            >
+              {item.icon}
+              <span className={open ? "link_open" : "link_closed"}>
+                {item.text}
+              </span>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

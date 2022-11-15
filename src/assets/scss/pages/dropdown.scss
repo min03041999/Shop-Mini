@@ -1,0 +1,39 @@
+.dropdown {
+    &-btn {
+        display: flex;
+        align-items: center;
+        font-family: $font-serif;
+        @include font-size(18px);
+    }
+
+    &-group {
+        position: fixed;
+        width: 200px;
+        top: -20rem;
+        right: 3rem;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+
+        &.active {
+            top: 6rem;
+            right: 3rem;
+            padding: 1.5rem;
+            background-color: $white-text;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include font-size(18px);
+        margin-bottom: 1rem;
+        cursor: pointer;
+        &:last-child {
+            margin-bottom: 0rem;
+        }
+    }
+}
