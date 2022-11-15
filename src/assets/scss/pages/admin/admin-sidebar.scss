@@ -1,14 +1,8 @@
 .admin-sidebar {
-    position: fixed;
-    width: 250px;
-    height: 100vh;
-    transform: translateX(0);
-    background-color: $white-text;
-    transition: 0.3s ease-in;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    z-index: 99;
-
     &_header {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
         font-family: $font-satisfy;
         height: 80px;
         box-sizing: border-box;
@@ -23,29 +17,62 @@
         cursor: pointer;
     }
 
-    &_item {
-        .label {
-            font-size: 13px;
-            text-transform: uppercase;
-            font-weight: 700;
-            padding: 1rem 1.5rem;
-        }
+    &_button {
+        margin-top: 1.5rem;
+        align-self: flex-start;  
+        justify-self: flex-end;
+        color: #B2BAC2;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding-left: 15px;
 
-        .menu {
-            .item {
-                font-family: $font-serif;
-                font-weight: 700;
-                @include font-size(18px);
-                padding: 1.5rem 2.5rem;
-                cursor: pointer;
-
-                &:hover {
-                    color: $white-text;
-                    background: $milk_orange;
-                }
-            }
-
+        &:hover {
+            color: $milk_orange;
         }
     }
-}   
 
+    &_item {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.2rem;
+        cursor: pointer;
+        color: #B2BAC2;
+        text-decoration: none;
+
+        &:hover {
+            color: $milk_orange;
+            background-color: #244f7d1c;
+            transition:  0.3s ease-in-out;
+        }
+
+        .link_open {
+            padding-left: 16px;
+            visibility: visible;
+            display: block;
+        }
+
+        .link_closed {
+            padding-left: 16px;
+            visibility: hidden;
+            display: none;
+        }
+    }
+}
+
+.sidebar_open {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background-color: $white-text;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.sidebar_closed {
+    position: fixed;
+    width: 60px;
+    height: 100vh;
+    background-color: $white-text;
+    transition:  0.3s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
