@@ -1,0 +1,21 @@
+.card {
+    position: relative;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border-radius: 5px;
+    background-color: $white-text;
+    box-shadow: 6px 11px 41px -28px #a99de7;
+
+    &-title {
+        font-family: $font-serif;
+        @include font-size(24px);
+    }
+
+    &-body {
+        position: relative;
+        margin-top: 30px;
+        @media #{$info-tablet-vertical} {
+            margin-top: 15px;
+        }
+    }
+}

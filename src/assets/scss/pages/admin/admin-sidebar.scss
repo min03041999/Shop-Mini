@@ -21,7 +21,7 @@
         margin-top: 1.5rem;
         align-self: flex-start;  
         justify-self: flex-end;
-        color: #B2BAC2;
+        color: #76838f;
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -37,7 +37,7 @@
         align-items: center;
         padding: 1rem 1.2rem;
         cursor: pointer;
-        color: #B2BAC2;
+        color: #76838f;
         text-decoration: none;
 
         &:hover {
@@ -73,7 +73,7 @@
     background-color: $white-text;
     transition:  0.3s ease-in-out;
     z-index: 99;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, #a99de7 0px 8px 16px -8px;
 }
 
 .sidebar_closed {
@@ -82,6 +82,6 @@
     height: 100vh;
     background-color: $white-text;
     transition:  0.3s ease-in-out;
-    z-index: 99;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        z-index: 99;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, #a99de7 0px 8px 16px -8px;
 }

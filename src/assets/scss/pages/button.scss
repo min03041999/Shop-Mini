@@ -1,0 +1,48 @@
+.btn {
+    font-family: $font-serif;
+    @include font-size(16px);
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+
+    &.btn-success {
+        background-color: $color-success;
+        color: $white-text;
+        border: 1px solid $color-success;
+
+        &:hover {
+            background-color: $white-text;
+            color: $color-success;
+            transition: ease 0.3s;
+        }
+    }
+
+    &.btn-warning {
+        background-color: $color-warning;
+        color: $white-text;
+        border: 1px solid $color-warning;
+
+        &:hover {
+            background-color: $white-text;
+            color: $color-warning;
+            transition: ease 0.3s;
+        }
+    }
+
+    &.btn-danger {
+        background-color: $color-danger;
+        color: $white-text;
+        border: 1px solid $color-danger;
+
+        &:hover {
+            background-color: $white-text;
+            color: $color-danger;
+            transition: ease 0.3s;
+        }
+    }
+}
+
+.btn-10 {
+    @include flex();
+    gap: 10px;
+    margin-bottom: 2rem;
+}

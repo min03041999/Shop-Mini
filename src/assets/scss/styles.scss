@@ -18,11 +18,15 @@
 
 // Layout
 @import 'layout/common.scss';
+@import 'antd/dist/antd.css';
 
 
 //Pages
 //common
 @import 'pages/dropdown.scss';
+@import 'pages/card.scss';
+@import 'pages/page-title.scss';
+@import 'pages/button.scss';
 
 //Admin Login
 @import 'pages/admin/admin-login.scss';
